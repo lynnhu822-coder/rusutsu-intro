@@ -166,13 +166,13 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
 .facilities-section{background:var(--ink-mid);padding:80px 0 80px 60px;border-top:1px solid rgba(245,243,239,.06);}
 .facilities-inner{max-width:none;position:relative;}
 .facilities-inner>.section-label,.facilities-inner>.why-heading,.facilities-inner>.why-sub{padding-right:60px;max-width:1200px;}
-.facilities-grid-wrap{position:relative;}
+.facilities-grid-wrap{position:relative;cursor:grab;}
 .facilities-grid-wrap::after{content:'';position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,var(--ink-mid) 0%,transparent 100%);pointer-events:none;z-index:2;}
-.facilities-grid{display:flex;overflow-x:auto;gap:3px;margin-top:40px;padding-right:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;}
-.facilities-grid:active{cursor:grabbing;}
+.facilities-grid{display:flex;overflow-x:auto;gap:3px;margin-top:40px;padding-right:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.facilities-grid-wrap:active{cursor:grabbing;}
 .facilities-grid::-webkit-scrollbar{display:none;}
 .facility-card{flex-shrink:0;width:300px;aspect-ratio:3/4;position:relative;overflow:hidden;}
-.facilities-scroll-hint{display:flex;align-items:center;gap:8px;margin-top:14px;padding-right:60px;justify-content:flex-end;}
+.facilities-scroll-hint{display:flex;align-items:center;gap:8px;margin-top:14px;padding-right:60px;justify-content:center;}
 .facilities-scroll-hint span{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:3px;color:rgba(245,243,239,.3);}
 .facility-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
 .facility-card:hover img{transform:scale(1.05);}
@@ -418,7 +418,7 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
     <img src="https://blog2.hisway306.jp/wp-content/uploads/2020/02/P1260180.jpg" alt="留壽都滑雪場 北海道粉雪">
   </div>
   <div class="hero-bg hero-bg-mobile">
-    <img src="https://www.iski.com.tw/image/catalog/%E6%97%A5%E6%9C%AC%E9%9B%AA%E5%A0%B4/landing%20page%202026/CA606F6C-5EED-4B3F-B2A2-97B69438937E.jpg" alt="留壽都滑雪場 北海道粉雪" style="width:100%;height:100%;object-fit:cover;object-position:60% 35%;">
+    <img src="https://www.iski.com.tw/image/catalog/%E6%97%A5%E6%9C%AC%E9%9B%AA%E5%A0%B4/landing%20page%202026/S__54427764.jpg" alt="留壽都滑雪場 北海道粉雪" style="width:100%;height:100%;object-fit:cover;object-position:60% 35%;">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -590,14 +590,6 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
         <div class="facility-card-body">
           <p class="facility-card-tag">NORTH WING</p>
           <p class="facility-card-title">室內雙層旋轉木馬</p>
-        </div>
-      </div>
-      <div class="facility-card">
-        <img src="https://rusutsu.com/wp-content/uploads/photo_light-maze-640x640.jpg" alt="光の迷宮">
-        <div class="facility-card-overlay"></div>
-        <div class="facility-card-body">
-          <p class="facility-card-tag">WINTER EVENT</p>
-          <p class="facility-card-title">光の迷宮</p>
         </div>
       </div>
       <div class="facility-card">
