@@ -31,13 +31,13 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
 .countdown-bar-num{font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--ink);letter-spacing:1px;min-width:22px;text-align:center;}
 .countdown-bar-sep{color:rgba(0,0,0,.3);font-size:13px;}
 .countdown-bar-label{font-size:9px;color:rgba(0,0,0,.45);letter-spacing:1px;}
-.global-nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .4s;background:transparent;}
+.global-nav{position:fixed;top:36px;left:0;right:0;z-index:200;transition:background .4s;background:transparent;}
 .global-nav.scrolled{background:rgba(22,29,36,.97);backdrop-filter:blur(16px);}
-.nav-top{display:flex;justify-content:space-between;align-items:center;padding:56px 48px 20px;position:relative;z-index:1;}
-.nav-top::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,53,64,.9) 0%,transparent 100%);pointer-events:none;}
-.global-nav.scrolled .nav-top::before{opacity:0;}
+.nav-top{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;position:relative;z-index:1;}
+
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:4px;color:var(--snow);text-decoration:none;position:relative;z-index:1;}
 .nav-logo .ski{color:var(--brand);}
+.nav-top::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,53,64,.9) 0%,transparent 100%);pointer-events:none;}
 .nav-messenger{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:var(--snow);border:1px solid rgba(245,243,239,.3);padding:9px 20px;text-decoration:none;transition:all .3s;position:relative;z-index:1;}
 .nav-messenger:hover{background:var(--brand);border-color:var(--brand);}
 
@@ -314,7 +314,7 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
 @media(max-width:768px){
   .countdown-bar{gap:8px;}
 
-  .nav-top{padding:52px 20px 16px;}
+  .nav-top{padding:16px 20px;}
   .nav-messenger{display:none;}
   .hero{height:100svh;}
   .hero-content{padding:0 24px 64px;}
@@ -399,7 +399,8 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
   <a href="https://www.iski.com.tw/index.php?route=common/snowing_buy" class="mobile-menu-cta" target="_blank">立即報名 團體課程 →</a>
 </div>
 
-<!-- NAV -->\n<nav class="global-nav" id="globalNav">
+<!-- NAV -->
+<nav class="global-nav" id="globalNav">
   <div class="nav-top">
     <a href="https://www.iski.com.tw/" class="nav-logo" style="display:flex;align-items:center;"><img src="https://stage.iski.com.tw/image/catalog/snowing/01.home/link/M/M_Website_home logo01.png" alt="iSKI" style="height:28px;"></a>
     <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:1;">
@@ -411,7 +412,6 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
   </div>
 </nav>
 
-<!-- CHAPTER NAV -->
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg hero-bg-desktop">
