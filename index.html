@@ -166,7 +166,7 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
 .facilities-section{background:var(--ink-mid);padding:80px 0 80px 60px;border-top:1px solid rgba(245,243,239,.06);}
 .facilities-inner{max-width:none;position:relative;}
 .facilities-inner>.section-label,.facilities-inner>.why-heading,.facilities-inner>.why-sub{padding-right:60px;max-width:1200px;}
-.facilities-grid-wrap{position:relative;cursor:grab;}
+.facilities-grid-wrap{position:relative;overflow:hidden;}
 .facilities-grid-wrap::after{content:'';position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,var(--ink-mid) 0%,transparent 100%);pointer-events:none;z-index:2;}
 .facilities-grid{display:flex;overflow-x:auto;gap:3px;margin-top:40px;padding-right:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .facilities-grid-wrap:active{cursor:grabbing;}
@@ -267,7 +267,7 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
 .access-card{background:rgba(255,255,255,.025);border:1px solid rgba(245,243,239,.07);padding:36px 40px;border-left:3px solid var(--brand);}
 .access-card-from{font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:3px;color:var(--yellow);margin-bottom:12px;}
 .access-card-route{font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--snow);margin-bottom:10px;letter-spacing:2px;}
-.access-card-detail{font-size:13px;color:rgba(245,243,239,.55);line-height:1.9;}
+.access-card-detail{font-size:13px;color:rgba(245,243,239,.55);line-height:1.9;word-break:break-word;overflow-wrap:break-word;}
 .access-card-time{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--yellow);letter-spacing:2px;margin-top:16px;line-height:1;}
 .access-card-time-unit{font-size:13px;color:rgba(212,245,60,.6);margin-left:4px;}
 
