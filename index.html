@@ -920,6 +920,18 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// DEBUG: find overflowing elements
+(function(){
+  var docWidth = document.documentElement.offsetWidth;
+  document.querySelectorAll('*').forEach(function(el){
+    if(el.offsetWidth > docWidth){
+      el.style.outline = '3px solid red';
+      console.log('OVERFLOW:', el.tagName, el.className, el.offsetWidth + 'px');
+    }
+  });
+})();
+
 // Drag to scroll - facilities
 (function(){
   const grid = document.querySelector('.facilities-grid');
