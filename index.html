@@ -162,6 +162,34 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
   .hotel-card-img{height:220px;}
 }
 
+/* ══ RESORT FACILITIES ══ */
+.facilities-section{background:var(--ink-mid);padding:80px 0 80px 60px;border-top:1px solid rgba(245,243,239,.06);}
+.facilities-inner{max-width:none;position:relative;}
+.facilities-inner>.section-label,.facilities-inner>.why-heading,.facilities-inner>.why-sub{padding-right:60px;max-width:1200px;}
+.facilities-grid-wrap{position:relative;}
+.facilities-grid-wrap::after{content:'';position:absolute;top:0;right:0;width:120px;height:100%;background:linear-gradient(to left,var(--ink-mid) 0%,transparent 100%);pointer-events:none;z-index:2;}
+.facilities-grid{display:flex;overflow-x:auto;gap:3px;margin-top:40px;padding-right:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;}
+.facilities-grid:active{cursor:grabbing;}
+.facilities-grid::-webkit-scrollbar{display:none;}
+.facility-card{flex-shrink:0;width:300px;aspect-ratio:3/4;position:relative;overflow:hidden;}
+.facilities-scroll-hint{display:flex;align-items:center;gap:8px;margin-top:14px;padding-right:60px;justify-content:flex-end;}
+.facilities-scroll-hint span{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:3px;color:rgba(245,243,239,.3);}
+.facility-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.facility-card:hover img{transform:scale(1.05);}
+.facility-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,29,36,.92) 0%,rgba(22,29,36,.2) 60%,transparent 100%);}
+.facility-card-body{position:absolute;bottom:0;left:0;right:0;padding:24px 20px;}
+.facility-card-tag{font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:3px;color:var(--yellow);margin-bottom:6px;}
+.facility-card-title{font-family:'Shippori Mincho',serif;font-size:15px;font-weight:700;color:var(--snow);letter-spacing:1px;line-height:1.5;}
+/* Mobile: horizontal scroll */
+@media(max-width:768px){
+  .facilities-section{padding:60px 0 60px 24px;}
+  .facilities-inner>.section-label,.facilities-inner>.why-heading,.facilities-inner>.why-sub{padding-right:24px;}
+  .facilities-grid{padding-right:0;}
+  .facility-card{width:78vw;}
+  .facilities-scroll-hint{padding-right:24px;}
+  .facilities-grid-wrap::after{width:60px;}
+}
+
 /* ══ MAP SECTION ══ */
 .map-section{background:var(--ink-deep);padding:80px 60px;border-top:1px solid rgba(245,243,239,.06);}
 .map-section-inner{max-width:1200px;margin:0 auto;}
@@ -387,7 +415,7 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg hero-bg-desktop">
-    <img src="https://www.iski.com.tw/image/catalog/%E6%97%A5%E6%9C%AC%E9%9B%AA%E5%A0%B4/landing%20page%202026/A9FB170E-83C9-4B43-819B-40A2DBDC5367.jpg" alt="留壽都滑雪場 北海道粉雪">
+    <img src="https://blog2.hisway306.jp/wp-content/uploads/2020/02/P1260180.jpg" alt="留壽都滑雪場 北海道粉雪">
   </div>
   <div class="hero-bg hero-bg-mobile">
     <img src="https://www.iski.com.tw/image/catalog/%E6%97%A5%E6%9C%AC%E9%9B%AA%E5%A0%B4/landing%20page%202026/CA606F6C-5EED-4B3F-B2A2-97B69438937E.jpg" alt="留壽都滑雪場 北海道粉雪" style="width:100%;height:100%;object-fit:cover;object-position:60% 35%;">
@@ -436,11 +464,6 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
     </div>
     <div>
       <p class="intro-body reveal rd1">滑一週，沒有一條重複。三山連線 37 條滑道、頂級 Ski-In/Ski-Out、北海道粉雪——留壽都把你對滑雪度假的所有想像，裝進同一個地方。</p>
-      <div class="pillars reveal rd2">
-        <div class="pillar"><div class="pn">01</div><div><h3 class="pt">滑到第七天，才走完一半</h3><p class="pd">三山連線、37 條滑道、最大落差 440m。初學者到多年老手，每天都有新路線。</p></div></div>
-        <div class="pillar"><div class="pn">02</div><div><h3 class="pt">早上九點，推開門就是粉雪</h3><p class="pd">威斯汀等豪華飯店直連雪道，穿上雪靴出門，雪道就在腳下。</p></div></div>
-        <div class="pillar"><div class="pn">03</div><div><h3 class="pt">滑完雪，還有一半沒玩到</h3><p class="pd">壽之湯溫泉、30+ 家北海道美食餐廳、Snow Rafting——這裡的雪季比你想的更長。</p></div></div>
-      </div>
     </div>
   </div>
 </div>
@@ -553,6 +576,86 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
   </div>
 </div>
 
+<!-- RESORT FACILITIES -->
+<section class="facilities-section">
+  <div class="facilities-inner">
+    <p class="section-label">RESORT FACILITIES</p>
+    <h3 class="why-heading reveal">滑雪之外，還有更多。</h3>
+    <p class="why-sub reveal">RUSUTSU — MORE THAN A SKI RESORT</p>
+    <div class="facilities-grid-wrap">
+    <div class="facilities-grid reveal">
+      <div class="facility-card">
+        <img src="https://rusutsu.com/zh/assets/img/apres-nightlife/apres-nightlife-img02.jpg" alt="室內雙層旋轉木馬">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">NORTH WING</p>
+          <p class="facility-card-title">室內雙層旋轉木馬</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/photo_light-maze-640x640.jpg" alt="光の迷宮">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">WINTER EVENT</p>
+          <p class="facility-card-title">光の迷宮</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://www.iski.com.tw/image/catalog/%E6%97%A5%E6%9C%AC%E9%9B%AA%E5%A0%B4/landing%20page%202026/S__54427763.jpg" alt="單軌電車">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">RESORT TRANSPORT</p>
+          <p class="facility-card-title">跨越馬路的單軌電車</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/kotobukinoyu_tp02.jpg" alt="壽之湯溫泉">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">ONSEN</p>
+          <p class="facility-card-title">壽之湯溫泉</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/2020/03/oktoberfest_topics1.jpg" alt="Oktoberfest 螃蟹自助">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">DINING</p>
+          <p class="facility-card-title">Oktoberfest 螃蟹自助</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/2020/03/snow-rafting_program1.jpg" alt="Snow Rafting">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">WINTER ACTIVITY</p>
+          <p class="facility-card-title">Snow Rafting</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/horse-riding-winter_mv-1-640x640.jpg" alt="騎馬 洞爺湖">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">ACTIVITY</p>
+          <p class="facility-card-title">騎馬 × 洞爺湖絕景</p>
+        </div>
+      </div>
+      <div class="facility-card">
+        <img src="https://rusutsu.com/wp-content/uploads/samurai-kids-park_mv.jpg" alt="Samurai Kids Park">
+        <div class="facility-card-overlay"></div>
+        <div class="facility-card-body">
+          <p class="facility-card-tag">KIDS</p>
+          <p class="facility-card-title">Samurai Kids Park</p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="facilities-scroll-hint">
+      <span>← 滑動探索 →</span>
+    </div>
+  </div>
+</section>
+
 <!-- MAP SECTION -->
 <div class="map-section">
   <div class="map-section-inner">
@@ -643,31 +746,31 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
     <div class="explore-header reveal">
       <p class="section-label">EXPLORE</p>
       <h3 class="explore-title">EXPLORE</h3>
-      <p class="explore-sub">度假村體驗與周邊景點</p>
+      <p class="explore-sub">留壽都周邊景點</p>
     </div>
     <div class="explore-grid reveal rd1">
       <div class="explore-card">
-        <img src="https://rusutsu.com/zh/assets/img/access/sightseeing-tour-plan05-img.jpg" alt="洞爺湖 周邊景點">
+        <img src="https://tw.wamazing.com/media/wp-content/uploads/sites/4/2019/05/touyakoonsen_pixta_77536008_M.jpg.webp" alt="洞爺湖">
         <div class="explore-card-content">
           <p class="explore-card-num">01</p>
           <p class="explore-card-title">洞爺湖</p>
-          <p class="explore-card-sub">北海道知名湖景 · 周邊一日遊</p>
+          <p class="explore-card-sub">北海道知名湖景 · 車程約 20 分</p>
         </div>
       </div>
       <div class="explore-card">
-        <img src="https://rusutsu.com/wp-content/uploads/News_Westin-Rusutsu-2022-award-1.jpg" alt="留壽都威斯汀度假酒店">
+        <img src="https://jozankei.jp/wp-content/uploads/2025/05/DSC3735_original-1600x900.jpg" alt="定山溪賞雪漂流">
         <div class="explore-card-content">
           <p class="explore-card-num">02</p>
-          <p class="explore-card-title">豪華飯店住宿</p>
-          <p class="explore-card-sub">Ski-In / Ski-Out · 威斯汀</p>
+          <p class="explore-card-title">定山溪賞雪漂流</p>
+          <p class="explore-card-sub">冬季限定體驗 · 車程約 60 分</p>
         </div>
       </div>
       <div class="explore-card">
-        <img src="https://rusutsu.com/wp-content/uploads/2020/03/kotobukinoyu_gallery3.jpg" alt="留壽都溫泉 壽之湯">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJS1-tCzraB_IqxG-HI0YUgETihD8b_lzlAQ&s" alt="真狩溫泉">
         <div class="explore-card-content">
           <p class="explore-card-num">03</p>
-          <p class="explore-card-title">壽之湯溫泉</p>
-          <p class="explore-card-sub">北海道天然溫泉 · 滑後泡湯</p>
+          <p class="explore-card-title">真狩溫泉</p>
+          <p class="explore-card-sub">羊蹄山麓天然溫泉 · 車程約 15 分</p>
         </div>
       </div>
     </div>
