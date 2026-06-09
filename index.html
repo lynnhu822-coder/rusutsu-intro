@@ -93,7 +93,7 @@ body{background:var(--ink);color:var(--snow);font-family:'Noto Sans TC',sans-ser
 @keyframes scrollPulse{0%,100%{opacity:.25;transform:scaleY(1)}50%{opacity:1;transform:scaleY(.55)}}
 
 /* ══ MARQUEE ══ */
-.marquee-wrap{overflow:hidden;border-top:1px solid rgba(245,243,239,.05);border-bottom:1px solid rgba(245,243,239,.05);padding:16px 0;background:var(--ink-mid);}
+.marquee-wrap{overflow:hidden;border-top:1px solid rgba(245,243,239,.05);border-bottom:1px solid rgba(245,243,239,.05);padding:16px 0;background:var(--ink-mid);width:100%;position:relative;}
 .marquee-track{display:flex;gap:52px;animation:marquee 34s linear infinite;white-space:nowrap;width:max-content;}
 .marquee-item{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:4px;color:rgba(245,243,239,.3);display:flex;align-items:center;gap:52px;}
 .marquee-item::after{content:'✦';color:var(--brand);opacity:.5;font-size:8px;}
@@ -920,17 +920,6 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-// DEBUG: find overflowing elements
-(function(){
-  var docWidth = document.documentElement.offsetWidth;
-  document.querySelectorAll('*').forEach(function(el){
-    if(el.offsetWidth > docWidth){
-      el.style.outline = '3px solid red';
-      console.log('OVERFLOW:', el.tagName, el.className, el.offsetWidth + 'px');
-    }
-  });
-})();
 
 // Drag to scroll - facilities
 (function(){
