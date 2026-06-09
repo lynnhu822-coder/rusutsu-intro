@@ -297,10 +297,11 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
 .footer-links a:hover{color:rgba(245,243,239,.85);}
 .footer-copy{font-size:10px;letter-spacing:1px;color:rgba(245,243,239,.38);}
 .footer-social{display:flex;gap:16px;align-items:center;}
-.footer-social-link{display:flex;align-items:center;gap:7px;font-size:10px;letter-spacing:1.5px;color:rgba(245,243,239,.45);text-decoration:none;transition:color .3s;}
+.footer-social-link{display:flex;align-items:center;gap:7px;font-size:12px;letter-spacing:1px;color:rgba(245,243,239,.45);text-decoration:none;transition:color .3s;}
 .footer-social-link:hover{color:rgba(245,243,239,.85);}
 .footer-social-link svg{flex-shrink:0;opacity:.6;transition:opacity .3s;}
 .footer-social-link:hover svg{opacity:1;}
+.footer-divider{width:1px;height:14px;background:rgba(245,243,239,.12);}
 .footer-divider{width:1px;height:14px;background:rgba(245,243,239,.12);}
 
 /* ══ REVEAL ══ */
@@ -329,7 +330,8 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
   .juhyo-img{height:300px;}
   .juhyo-img::after{background:linear-gradient(to top,var(--ink-deep) 0%,transparent 60%);}
   .juhyo-content{padding:40px 24px;}
-  .map-section,.explore-section,.access-section{padding-left:24px;padding-right:24px;}
+  .map-wrap{overflow:visible;}
+  .map-ping{position:static;margin-top:8px;display:inline-flex;}
   .map-title-row{flex-direction:column;align-items:flex-start;gap:4px;}
   .scene-divider{background-attachment:scroll;height:320px;}
   .why-section{padding:60px 24px;}
@@ -341,7 +343,7 @@ footer{border-top:1px solid rgba(245,243,239,.07);padding:40px 60px;display:flex
   .cta-wrap{grid-template-columns:1fr;padding:40px 24px;}
   footer{flex-direction:column;gap:24px;text-align:center;padding:32px 24px;}
   .footer-links{display:none;}
-  .footer-social{width:100%;justify-content:center;gap:12px;flex-wrap:wrap;}
+  .footer-social{width:100%;justify-content:center;gap:12px;flex-wrap:nowrap;}
   .footer-social-link{font-size:11px;letter-spacing:.5px;}
   .floating-messenger .fm-text{display:none;}
   .floating-messenger{padding:13px;border-radius:50%;}
